@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { Button } from 'react-bootstrap';
+import { InputGroup, FormControl, Container } from 'react-bootstrap';
 
 const ContactForm = ({ addContact }) => {
   const [contact, setContact] = useState({ name: '', phone: 0, email: '', company: '', comment: ''})
@@ -11,54 +13,77 @@ const ContactForm = ({ addContact }) => {
 
   return (
     <>
+    <Container>
       <form onSubmit={handleSubmit}>
-        <label>Name:</label>
-        <input 
+      <InputGroup size="sm" className="mb-3">
+          <InputGroup.Text id="inputGroup-sizing-sm">Name</InputGroup.Text>
+          <FormControl 
+          aria-label="Name" 
+          aria-describedby="inputGroup-sizing-sm"
           name='name' 
           value={contact.name}
           onChange={(e) => setContact({...contact, name: e.target.value})}
           required
           placeholder="name"
         />
-        <br />
-        <label>Phone:</label>
-        <input
+        </InputGroup>
+      
+
+        <InputGroup size="sm" className="mb-3">
+        <InputGroup.Text id="inputGroup-sizing-sm">Phone</InputGroup.Text>
+        <FormControl 
+          aria-label="Phone" 
+          aria-describedby="inputGroup-sizing-sm"
           name='phone'
           value={contact.phone}
           onChange={(e) => setContact({...contact, phone: e.target.value})}
           required
-          placeholder="phone"
-        />
-        <br />
-        <label>Email:</label>
-        <input
+          placeholder="phone" />
+          </InputGroup>
+        
+        <InputGroup size="sm" className="mb-3">
+        <InputGroup.Text id="inputGroup-sizing-sm">Email</InputGroup.Text>
+        <FormControl 
+        aria-label="Email" 
+        aria-describedby="inputGroup-sizing-sm"
         name='email'
         value={contact.email}
         onChange={(e) => setContact({...contact, email: e.target.value})}
         required
         placeholder="email"
         />
-        <br />
-        <label>Company:</label>
-        <input
+        </InputGroup>
+
+        
+        <InputGroup size="sm" className="mb-3">
+        <InputGroup.Text id="inputGroup-sizing-sm">Company</InputGroup.Text>
+        <FormControl 
+        aria-label="Company" 
+        aria-describedby="inputGroup-sizing-sm"
         name='company'
         value={contact.company}
         onChange={(e) => setContact({...contact, company: e.target.value})}
         required
         placeholder="company"
         />
-        <br />
-        <label>Comment:</label>
-        <input
+        </InputGroup>
+        
+        <InputGroup size="sm" className="mb-3">
+        <InputGroup.Text id="inputGroup-sizing-sm">Comment</InputGroup.Text>
+        <FormControl 
+        aria-label="Comment" 
+        aria-describedby="inputGroup-sizing-sm"
         name='comment'
         value={contact.comment}
         onChange={(e) => setContact({...contact, comment: e.target.value})}
         required
         placeholder="comment"
         />
-        <br/>
-        <button type='submit'>Submit</button>
+        </InputGroup>
+
+        <Button variant="outline-dark">Submit</Button>
       </form>
+      </Container>
     </>
   )
 }

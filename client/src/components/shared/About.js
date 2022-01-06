@@ -1,6 +1,12 @@
-const About = () => {
+import React from 'react';
+
+const About = ({AboutPage}) => {
   return (
-    <h1>About Page</h1>
+    <>
+    <h1>About</h1>
+
+    <h3>{AboutPage}</h3>
+    </>
   )
 }
 
