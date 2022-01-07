@@ -3,7 +3,7 @@ import React from 'react';
 const Home = ({HomePage}) => {
   return (
     <>
-    <h1>Freelance Web Developer based in Salt Lake City, UT.</h1>
+    <h1> Web Developer based in Salt Lake City, UT.</h1>
 
     <h3>{HomePage}</h3>
     </>

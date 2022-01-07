@@ -34,14 +34,13 @@ const Blogs = ({}) => {
   const updateBlog = (id, blog) => {
     axios.put(`/api/blogs/${id}`, { blog })
       .then( res => {
-        const newUpdatedBlog = post.map( p => {
+        const newUpdatedBlog = blog.map( p => {
           if (p.id === id) {
             return res.data
           }
           return p
         })
-        setBlogs(newUpdatedBlogs)
-        // edit works but needs to refresh
+        // setBlogs(newUpdatedBlogs)
       })
       .catch( err => console.log(err))
   }
@@ -50,9 +49,7 @@ const Blogs = ({}) => {
     <>
       <h1>Blogs Page</h1>
       <BlogForm addBlog={addBlog} />
-      <BlogList 
-        blogs={blogs} 
-        blogId={blogId} 
+      <BlogList  
         deleteBlog={deleteBlog}
         updateBlog={updateBlog}
       />

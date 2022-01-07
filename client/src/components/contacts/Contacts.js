@@ -33,13 +33,13 @@ const Contacts = ({}) => {
   const updateContact = (id, contact) => {
     axios.put(`/api/contacts/${id}`, { contact })
       .then( res => {
-        const newUpdatedContact = post.map( p => {
+        const newUpdatedContact = contact.map( p => {
           if (p.id === id) {
             return res.data
           }
           return p
         })
-        setContacts(newUpdatedContacts)
+        // setContacts(newUpdatedContacts)
         // edit works but needs to refresh
       })
       .catch( err => console.log(err))
@@ -50,8 +50,6 @@ const Contacts = ({}) => {
       <h1>Contacts Page</h1>
       <ContactForm addContact={addContact} />
       <ContactList 
-        contacts={contacts} 
-        contactId={contactId} 
         deleteContact={deleteContact}
         updateContact={updateContact}
       />
