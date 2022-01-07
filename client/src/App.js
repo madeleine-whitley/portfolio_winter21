@@ -6,7 +6,7 @@ import Skills from './components/shared/Skills';
 import Work from './components/shared/Work';
 import NoMatch from './components/shared/NoMatch';
 import Contacts from './components/contacts/Contacts';
-import MainNavbar from './components/shared/MainNavbar';
+import Navbar from './components/shared/Navbar';
 import ContactShow from './components/contacts/ContactShow';
 import Blogs from './components/blogs/Blogs';
 import BlogShow from './components/blogs/BlogShow';
@@ -16,7 +16,7 @@ import { Container } from 'react-bootstrap';
 
 const App = () => (
   <>
-    <MainNavbar />
+    <Navbar />
     <Container>
     <Routes>
       <Route exact path='/' element={<Home />} />
