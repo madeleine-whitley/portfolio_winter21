@@ -10,6 +10,7 @@ import MainNavbar from './components/shared/MainNavbar';
 import ContactShow from './components/contacts/ContactShow';
 import Blogs from './components/blogs/Blogs';
 import BlogShow from './components/blogs/BlogShow';
+import Posts from './components/posts/PostShow';
 import PostShow from './components/posts/PostShow';
 import { Container } from 'react-bootstrap';
 
@@ -30,6 +31,7 @@ const App = () => (
         <Route exact path='/contacts/:contactId' element={<ContactShow />} />
         <Route exact path='/blogs' element={<Blogs />} />
         <Route exact path='/:blogId' element={<BlogShow />} />
+        <Route exact path='/:posts' element={<Posts />} />
         <Route exact path='/posts/:postId' element={<PostShow />} /> 
         <Route path='/*' element={<NoMatch />} />
      </Routes>
