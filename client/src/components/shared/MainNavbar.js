@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { Navbar, Container } from 'react-bootstrap';
 
 const MainNavbar = ({}) => {
@@ -13,7 +12,7 @@ const MainNavbar = ({}) => {
               About
           </Navbar.Brand>
           <Navbar.Brand href="/contacts">
-              Contact Form
+              Contact 
           </Navbar.Brand>
           <Navbar.Brand href="/projects">
               Projects
@@ -21,14 +20,8 @@ const MainNavbar = ({}) => {
           <Navbar.Brand href="/skills">
               Skills
           </Navbar.Brand>
-          <Navbar.Brand href="/work">
-              Work
-          </Navbar.Brand>
-          <Navbar.Brand href="/blogs">
-              Blogs
-          </Navbar.Brand>
-          <Navbar.Brand href="/posts">
-              Posts
+          <Navbar.Brand href="/testimonials">
+              Testimonials
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">

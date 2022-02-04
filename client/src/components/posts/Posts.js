@@ -37,7 +37,6 @@ const Posts = ({ blogId }) => {
           return p
         })
         setPosts(newUpdatedPosts)
-        // edit works but needs to refresh
       })
       .catch( err => console.log(err))
   }
